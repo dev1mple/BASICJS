@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <div class="container2">
+        <div class="verse-container">
+            <h2>
+                Philippians 4:13
+            </h2>
+            <p>
+                "I can do all things through Christ who strengthens me"
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <button id="demoButton" onclick="changeBackground()">Change Banner Background</button>
+        <button id="demoButton" onclick="removeBackground()">Remove Design</button>
+    </div>
+</div>
+
+<script>
+    <!--Bible Verse Button-->
+    function changeBackground(){
+        document.querySelector('container2').style.backgroundColor = '#6495ED';
+    }
+    function removeBackground(){
+        document.querySelector('.container2').style.backgroundColor = '#FFFFFF'
+    }
+    </script>
+</body>
+</html>
