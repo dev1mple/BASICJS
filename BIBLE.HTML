@@ -3,7 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    
+    <div class="container">
+        <div id="content-list">
+            <h2 id="title"> Hi everyone! I'm Jerrel Dave Treceñe.</h2>
+            <ul>
+                <li>
+                    I'm a CS student at Emilio Aguinaldo College Cavite
+                </li>
+                <li>
+                    I mostly spend my time playing basketball and computer games.
+                </li>
+                <li>
+                    I'm also interested at motorcyle and cars.
+                </li>
+                <li>
+                    I LOVE COMPUTER SCIENCE!!!.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        Add New: <input type="text" id="newAttribute" placeholder="Enter new attribute">
+    </p>
+    
+    <button id="fontButton" onclick="changeFontStyle()">Change Font Style</button>
+    <button id="boldButton" onclick="changetoBold()">Bold Text</button>
+    <button id="addButton" onclick="addNewElement()">Add new item on the list</button>
+    <button id="resetButton" onclick="revertChanges()">Reset Button</button>
+
+    <script>
+        function changeFontStyle(){
+            document.querySelector('.container').style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+        }
+        function changetoBold(){
+            document.querySelector('.container').style.fontWeight = "900";
+        }
+        function revertChanges(){
+            document.querySelector('.container').style.fontWeight = "100";
+            document.querySelector('.container').style.fontFamily = "Times New Roman";
+        }
+        function addNewElement(){
+            var myInput = document.getElementById('newAttribute').value;
+            var ul = document.querySelector ('ul');
+            var li = document.createElement ('li');
+            li.appendChild(document.createTextNode(myInput));
+            ul.appendChild(li);
+            }
+    </script>
 
     <div class="container2">
         <div class="verse-container">
@@ -25,7 +74,7 @@
 <script>
     <!--Bible Verse Button-->
     function changeBackground(){
-        document.querySelector('container2').style.backgroundColor = '#6495ED';
+        document.querySelector('.container2').style.backgroundColor = '#6495ED';
     }
     function removeBackground(){
         document.querySelector('.container2').style.backgroundColor = '#FFFFFF'
